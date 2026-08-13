@@ -1,5 +1,5 @@
 /* ============================================
-   自定义主题：靛紫配色（与官网统一）
+   自定义主题：靛紫配色（与官网 iaqq.top 统一）
    ============================================ */
 
 /* 亮色模式主色 */
@@ -25,15 +25,69 @@
   --radius: 10px;
 }
 
-/* 主色相关组件视觉增强 */
-[data-theme=light] .button-variant-primary,
-[data-theme=dark] .button-variant-primary {
-  background: var(--primary);
-  color: var(--primary-foreground);
+/* ============ 登录页 ============ */
+.login {
+  background:
+    radial-gradient(900px 500px at 12% 0%, rgba(79,70,229,.20), transparent 55%),
+    radial-gradient(800px 500px at 92% 8%, rgba(124,58,237,.16), transparent 55%),
+    linear-gradient(180deg, #eef2ff 0%, #f8f7ff 100%) !important;
 }
 
-/* 登录页背景：柔和渐变 */
-body:has(.login) {
-  background: radial-gradient(800px 400px at 20% 0%, rgba(99,102,241,.08), transparent 60%),
-              radial-gradient(600px 400px at 85% 15%, rgba(139,92,246,.08), transparent 60%);
+.login form {
+  background: #fff;
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 14px 44px rgba(79,70,229,.16);
+}
+
+[data-theme=dark] .login form {
+  background: #1f2430;
+  box-shadow: 0 14px 44px rgba(0,0,0,.45);
+}
+
+.login .zen-heading {
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+/* ============ 侧边栏：深靛紫渐变面板 ============ */
+.side-nav {
+  background: linear-gradient(180deg, #4f46e5 0%, #4338ca 60%, #3730a3 100%) !important;
+  border: none !important;
+  box-shadow: 2px 0 18px rgba(67,56,202,.25);
+}
+
+/* 侧边栏所有文字和图标变白 */
+.side-nav,
+.side-nav *,
+.side-nav *::before,
+.side-nav *::after {
+  color: rgba(255,255,255,.92) !important;
+}
+
+/* 侧边栏图标（描边类）也变白 */
+.side-nav svg {
+  stroke: rgba(255,255,255,.92) !important;
+  fill: rgba(255,255,255,.92) !important;
+}
+
+/* 选中/悬停的导航项：半透明白 */
+.side-nav [style*="background-color"] {
+  background-color: rgba(255,255,255,.14) !important;
+}
+
+.side-nav a:hover [style*="background-color"],
+.side-nav a:focus [style*="background-color"] {
+  background-color: rgba(255,255,255,.26) !important;
+}
+
+/* 侧边栏品牌文字 */
+.side-nav .zen-text-bold {
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* ============ 顶部导航条微调 ============ */
+[data-theme=light] body {
+  background: #fafbff;
 }

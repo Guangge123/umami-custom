@@ -12,5 +12,5 @@ export default async function () {
 }
 
 export const metadata: Metadata = {
-  title: 'Login',
+  title: '登录',
 };

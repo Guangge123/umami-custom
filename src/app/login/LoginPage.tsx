@@ -22,6 +22,7 @@ export function LoginPageWrapper({ children }: PropsWithChildren) {
 
   return (
     <Column
+      className="login"
       alignItems="center"
       justifyContent="flex-start"
       height="100vh"

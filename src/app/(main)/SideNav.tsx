@@ -71,6 +71,7 @@ export function SideNav(props: any) {
   return (
     <Column
       {...props}
+      className="side-nav"
       backgroundColor="surface-base"
       border
       borderRadius
@@ -98,7 +99,7 @@ export function SideNav(props: any) {
         >
           {!isCollapsed && (
             <IconLabel icon={<Logo />}>
-              <Text weight="bold">umami</Text>
+              <Text weight="bold">轻量统计</Text>
             </IconLabel>
           )}
           <PanelButton />

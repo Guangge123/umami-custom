@@ -45,8 +45,8 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     metadataBase: getBaseUrl(headerStore),
     title: {
-      template: '%s | Umami',
-      default: 'Umami',
+      template: '%s | 轻量统计',
+      default: '轻量统计',
     },
   };
 }
