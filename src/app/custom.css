@@ -1,0 +1,39 @@
+/* ============================================
+   自定义主题：靛紫配色（与官网统一）
+   ============================================ */
+
+/* 亮色模式主色 */
+:root {
+  --primary: #4f46e5;
+  --primary-foreground: #ffffff;
+  --focus-ring: #6366f1;
+  --status-info: #4f46e5;
+  --status-info-bg: #eef2ff;
+  --status-info-text: #4338ca;
+  --radius: 10px;
+  --font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans SC", "Segoe UI", Roboto, sans-serif;
+}
+
+/* 暗色模式主色 */
+[data-theme=dark] {
+  --primary: #818cf8;
+  --primary-foreground: #1e1b4b;
+  --focus-ring: #818cf8;
+  --status-info: #818cf8;
+  --status-info-bg: rgba(99,102,241,.18);
+  --status-info-text: #a5b4fc;
+  --radius: 10px;
+}
+
+/* 主色相关组件视觉增强 */
+[data-theme=light] .button-variant-primary,
+[data-theme=dark] .button-variant-primary {
+  background: var(--primary);
+  color: var(--primary-foreground);
+}
+
+/* 登录页背景：柔和渐变 */
+body:has(.login) {
+  background: radial-gradient(800px 400px at 20% 0%, rgba(99,102,241,.08), transparent 60%),
+              radial-gradient(600px 400px at 85% 15%, rgba(139,92,246,.08), transparent 60%);
+}
