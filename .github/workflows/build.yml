@@ -32,6 +32,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ghcr.io/${{ lower(github.repository) }}:latest
+          tags: ghcr.io/guangge123/umami-custom:latest
           cache-from: type=gha
           cache-to: type=gha,mode=max
